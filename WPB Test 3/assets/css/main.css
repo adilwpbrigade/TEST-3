@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Termina";
-  src: url("/assets/fonts/TerminaW05-Black.woff2") format("woff2"),
-       url("/assets/fonts/TerminaW05-Black.woff") format("woff");
+  src: url("../fonts/TerminaW05-Black.woff2") format("woff2"),
+       url("../fonts/TerminaW05-Black.woff") format("woff");
      
   font-weight: normal;
   font-style: normal;
@@ -250,7 +250,7 @@ footer > .container{
 /* -------------------- Hero section ------------------ */
 
 .hero-section{
-    background-image: url('/assets/images/banner-img.jpg');
+    background-image: url('../images/banner-img.jpg');
     min-height: 810px;
     background-size: cover;
     background-repeat: no-repeat;
