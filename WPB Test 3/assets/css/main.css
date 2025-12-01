@@ -1046,6 +1046,9 @@ nav > ul > li > a{
 
   min-height: 470px; 
     }
+    footer > .container{
+        flex-wrap: wrap;
+    }
 
 
 .main-swiper .swiper-slide {

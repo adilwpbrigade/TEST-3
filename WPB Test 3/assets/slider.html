@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayscale Logo Slider (Variable Width)</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/WPB Test 3/assets/css/main.css">
+    <!-- jQuery CDN (Added for jQuery initialization) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        /* Basic Reset & Container */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: black;
+            padding: 50px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+
+        /* Swiper Customization (Updated selector to .logoslider1) */
+        .logoslider1 {
+            width: 100%;
+            height: 150px;
+            /* CUSTOM HEIGHT: Increased for more vertical space */
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Clean look: removed background, border, and shadow from slide container */
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            /* KEY FOR VARIABLE WIDTH: Ensure Swiper respects explicit slide width */
+            width: auto !important;
+            min-width: 120px;
+            /* Ensures minimum visibility on auto slides */
+        }
+
+        /* Custom width classes for demonstration */
+        .logo-wide {
+            width: 220px !important;
+        }
+
+        .logo-normal {
+            width: 170px !important;
+        }
+
+        .logo-square {
+            width: 120px !important;
+        }
+
+
+        .swiper-slide:hover {
+            /* Subtle lift effect preserved */
+            transform: translateY(-5px);
+            /* Added a subtle shadow back on hover */
+
+        }
+
+        .swiper-slide img {
+            max-width: 90%;
+            max-height: 100px;
+            /* CUSTOM HEIGHT: Increased max height for logos */
+            object-fit: contain;
+            /* Apply grayscale filter and reduced opacity by default */
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            /* Added margin for breathing room outside the image bounds */
+            margin: 10px 0;
+        }
+
+        .swiper-slide:hover img {
+            /* Remove grayscale and restore full opacity on hover */
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Navigation Buttons */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #555;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 20px;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: #eee;
+            color: #000;
+        }
+
+        /* Hide pagination and scrollbar for a clean logo slider look */
+        .swiper-pagination,
+        .swiper-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Our Valued Partners</h2>
+
+        <!-- Updated container class to logoslider1 -->
+        <div class="swiper logoslider1">
+            <div class="swiper-wrapper">
+                <!-- Logos with Variable Widths -->
+
+                <!-- Google (Wide) -->
+                <div class="swiper-slide logo-wide"><img src="/WPB Test 3/assets/images/metrolinux.png"
+                        alt="Google Logo"></div>
+
+                <!-- Apple (Square) -->
+                <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>
+
+                <!-- Microsoft (Normal) -->
+                <div class="swiper-slide logo-normal"><img src="/WPB Test 3/assets/images/empire.png"
+                        alt="Microsoft Logo"></div>
+
+                 <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>   <div class="swiper-slide logo-square"><img src="/WPB Test 3/assets/images/toronto.png" alt="Apple Logo">
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        // Switched initialization from vanilla JS to jQuery's document ready function
+        $(document).ready(function () {
+            const swiper = new Swiper('.logoslider1', {
+                loop: true,
+                slidesPerView: 'auto', // Enables variable width per slide
+                spaceBetween: 40, // Increased spacing for better separation between auto-sized slides
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // Responsive spacing adjustments (slidesPerView handled by 'auto')
+                breakpoints: {
+                    320: {
+                        spaceBetween: 20
+                    },
+                    768: {
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        spaceBetween: 40
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
